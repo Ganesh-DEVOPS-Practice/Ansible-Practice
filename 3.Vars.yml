@@ -7,5 +7,7 @@
     
   tasks:
   - name: Print given Vars
+    vars:
+      name: Deekshitha
     ansible.builtin.debug:
       msg: "Hi i am {{name}} my age is {{age}}"
