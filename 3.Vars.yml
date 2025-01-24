@@ -1,13 +1,13 @@
 - name: print Vars on screen
   hosts: local
   connection: local    # so that ansible wont search for credentials
-  vars:
+  vars:   # play level variables 
     name: Ganesh
     age: 25
     
   tasks:
   - name: Print given Vars
-    vars:
+    vars:  # Task level variables
       name: Deekshitha
     ansible.builtin.debug:
       msg: "Hi i am {{name}} my age is {{age}}"
